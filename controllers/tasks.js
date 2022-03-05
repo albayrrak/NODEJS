@@ -19,7 +19,6 @@ const createTask = async (req, res) => {
     } catch (error) {
         res.status(500).json({ msg: error })
     }
-
 }
 
 // Seçili Taskı Getirmek İçin Gerekli Fonksiyon

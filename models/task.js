@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
-
+const { message } = require('../services/tasks')
 
 const data = new Date()
 const TaskSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: [true, "Lütfen doldurun"],
+        required: [true, message('Title is required')],
         trim: true,
         maxlength: 30,
         minlength: 5,
@@ -13,7 +13,7 @@ const TaskSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: [true, "Lütfen doldurun"],
+        required: [true, message("Title is required")],
         trim: true,
         maxlength: 250,
         minlength: 15
